@@ -1,0 +1,41 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel = "stylesheet" type = "text/css" href = "main.css" />
+    <title> Survey-Tool </title>
+</head>
+
+<body>
+    <img src="landscape.png" id="header-image">
+
+    <!-- Create Survey Section -->
+    <section id = "create-survey">
+        <h1 id="create-survey-title"> Test Form </h1>
+        <p id = "create-survey-instructions"> Fill me out and submit me! </p>
+        <form>
+            <div>
+                <label for="name" class="question question-title">Name:</label>
+                <input type="text" id="name" name="user_name">
+            </div>
+            <div>
+                <label for="mail" class="question question-title">E-mail:</label>
+                <input type="email" id="mail" name="user_mail">
+            </div>
+            <div>
+                <label class="question question-title">Must Check This Box:</label>
+                <input type="checkbox" id="check" name="check" disabled="true">
+            </div>
+        </form>
+
+            <button id="submitbutton" onclick="myfunc()">Submit</button>
+        <div id="clearfix"> </div>
+    </section>
+    <script type="text/javascript">
+        function myfunc() {
+            let checkbox = document.getElementById("check");
+            if (checkbox.checked) {
+                location.href = 'congrats.html';
+            }
+        }
+    </script>
+</body>
